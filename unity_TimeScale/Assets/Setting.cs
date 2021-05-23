@@ -152,18 +152,19 @@ public class Setting
 		(in ReadmeMd_StringCreator_Argument a_argument) => {
 			return new string[]{
 
-				#if(false)
-
 				"## 例",
 
 				"```",
 				"",
+				"/** timescale",
+				"*/",
 				"private BlueBack.TimeScale.TimeScale timescale;",
 				"",
 				"/** Start",
 				"*/",
 				"private void Start()",
 				"{",
+				"	//timescale",
 				"	this.timescale = new BlueBack.TimeScale.TimeScale();",
 				"}",
 				"",
@@ -173,24 +174,16 @@ public class Setting
 				"{",
 				"	//ポーズ。",
 				"	if(UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.Space) == true){",
-				"		this.timescale.SetPause(true);
+				"		this.timescale.SetPause(true);",
 				"	}",
 				"",
 				"	//ステップ再生。",
 				"	if(UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.Return) == true){",
-				"		this.timescale.StepPlay();
+				"		this.timescale.StepPlay();",
 				"	}",
 				"}",
 				"",
-				"/** FixedUpdate",
-				"*/",
-				"private void FixedUpdate()",
-				"{",
-				"}",
-
 				"```",
-
-				#endif
 			};
 		},
 	};
