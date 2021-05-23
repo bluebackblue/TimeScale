@@ -71,7 +71,7 @@ namespace Samples.TimeScale.Exsample
 			}
 
 			//ポーズ設定。
-			this.timescale.SetPauseNextFrame(this.pause);
+			this.timescale.SetPause(this.pause);
 			
 			//uitext_delta
 			if(this.pause == true){

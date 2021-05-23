@@ -19,15 +19,15 @@ namespace BlueBack.TimeScale
 		*/
 		private bool pause_request;
 
-		/** ポーズを１フレーム解除する。
+		/** ステップ再生。
 		*/
 		private bool stepplay_request;
 
-		/** 現在のタイムスケール。
+		/** タイムスケール。
 		*/
 		private float timescale_current;
 
-		/** 次のフレームで設定するタイムスケール。
+		/** 次のフレームのタイムスケール。
 		*/
 		private float timescale;
 
@@ -41,34 +41,48 @@ namespace BlueBack.TimeScale
 			BlueBack.UnityPlayerLoop.Add.AddFromType(ref t_playerloopsystem,UnityPlayerLoop.Mode.AddFirst,typeof(UnityEngine.PlayerLoop.PostLateUpdate),typeof(PlayerLoopType.ApplyUpdate),this.ApplyUpdate);
 			BlueBack.UnityPlayerLoop.UnityPlayerLoop.SetPlayerLoop(t_playerloopsystem);
 
+			//timescale
 			this.timescale = 1.0f;
+
+			//timescale_current
 			this.timescale_current = 1.0f;
+
+			//pause_request
 			this.pause_request = false;
+
+			//stepplay_request
 			this.stepplay_request = false;
 		}
 
-		/** 次のフレームで設定するタイムスケール。
+		/** 次のフレームのタイムスケール。設定。
 		*/
-		public void SetTimeScaleNextFrame(float a_timescale)
+		public void SetNextFrameTimeScale(float a_timescale)
 		{
 			this.timescale = a_timescale;
 		}
 
-		/** 現在のタイムスケール。
+		/** 次のフレームのタイムスケール。取得。
+		*/
+		public float GetNextFrameTimeScale()
+		{
+			return this.timescale;
+		}
+
+		/** タイムスケール。取得。
 		*/
 		public float GetTimeScale()
 		{
 			return this.timescale_current;
 		}
 
-		/** 次のフレームでポーズするかどうか。
+		/** ポーズ。
 		*/
-		public void SetPauseNextFrame(bool a_flag)
+		public void SetPause(bool a_flag)
 		{
 			this.pause_request = a_flag;
 		}
 
-		/** ポーズを１フレーム解除する。
+		/** ステップ再生。
 		*/
 		public void StepPlay()
 		{
