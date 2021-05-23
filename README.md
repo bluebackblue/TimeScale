@@ -14,7 +14,7 @@ Unity 2020.2.0b14
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/TimeScale.git?path=unity_TimeScale/Assets/UPM#0.0.0
+* https://github.com/bluebackblue/TimeScale.git?path=unity_TimeScale/Assets/UPM#0.0.1
 ### 開発
 * https://github.com/bluebackblue/TimeScale.git?path=unity_TimeScale/Assets/UPM
 

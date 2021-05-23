@@ -1,171 +1,103 @@
 
 
-#define MOUSE_UPDATE
-#define MOUSE_FIXEDUPDATE
-#define MOUSE_MANUAL
-
-
-/** Samples.Mouse.Exsample
+/** Samples.TimeScale.Exsample
 */
-namespace Samples.Mouse.Exsample
+namespace Samples.TimeScale.Exsample
 {
 	/** Main_MonoBehaviour
 	*/
 	public class Main_MonoBehaviour : UnityEngine.MonoBehaviour
 	{
-		#if(false)
-
-		/** mouse_update
+		/** timescale
 		*/
-		#if(MOUSE_UPDATE)
-		private BlueBack.Mouse.Mouse mouse_update;
-		#endif
+		private BlueBack.TimeScale.TimeScale timescale;
 
-		/** mouse_fixedupdate
+		/** ポーズ。
 		*/
-		#if(MOUSE_FIXEDUPDATE)
-		private BlueBack.Mouse.Mouse mouse_fixedupdate;
-		#endif
-
-		/** マニュアル呼び出し。
-		*/
-		#if(MOUSE_MANUAL)
-		private BlueBack.Mouse.Mouse mouse_manual;
-		#endif
-
-		/** 表示。
-		*/
-		#if(MOUSE_UPDATE)
-		private UnityEngine.UI.Text text_update;
-		private int value_update;
-		private UnityEngine.Vector2 value_wheel_update;
-		#endif
+		public bool pause;
 		
-		#if(MOUSE_FIXEDUPDATE)
-		private UnityEngine.UI.Text text_fixedupdate;
-		private int value_fixedupdate;
-		private UnityEngine.Vector2 value_wheel_fixedupdate;
-		#endif
-
-		#if(MOUSE_MANUAL)
-		private UnityEngine.UI.Text text_manual;
-		private int value_manual;
-		private UnityEngine.Vector2 value_wheel_manual;
-		#endif
-
-		/** Start
+		/** ポーズを１フレーム解除する。
 		*/
-		private void Start()
-		{
-			//mouse_update
-			#if(MOUSE_UPDATE)
-			this.mouse_update = new BlueBack.Mouse.Mouse(BlueBack.Mouse.Mode.Update,new BlueBack.Mouse.Param());
-			this.text_update = UnityEngine.GameObject.Find("Text_Update").GetComponent<UnityEngine.UI.Text>();
-			this.value_update = 0;
-			this.value_wheel_update = new UnityEngine.Vector2(0.0f,0.0f);
-			#endif
+		public bool stepplay_request;
 
-			//mouse_fixedupdate
-			#if(MOUSE_FIXEDUPDATE)
-			this.mouse_fixedupdate = new BlueBack.Mouse.Mouse(BlueBack.Mouse.Mode.FixedUpdate,new BlueBack.Mouse.Param());
-			this.text_fixedupdate = UnityEngine.GameObject.Find("Text_FixedUpdate").GetComponent<UnityEngine.UI.Text>();
-			this.value_fixedupdate = 0;
-			this.value_wheel_fixedupdate = new UnityEngine.Vector2(0.0f,0.0f);
-			#endif
-
-			//マニュアル呼び出し。
-			#if(MOUSE_MANUAL)
-			this.mouse_manual = new BlueBack.Mouse.Mouse(BlueBack.Mouse.Mode.Manual,new BlueBack.Mouse.Param());
-			this.text_manual = UnityEngine.GameObject.Find("Text_Manual").GetComponent<UnityEngine.UI.Text>();
-			this.value_manual = 0;
-			this.value_wheel_manual = new UnityEngine.Vector2(0.0f,0.0f);
-			#endif
-
-			//表示。
-			UnityEngine.Application.targetFrameRate = 10;
-		}
-
-		/** Update
+		/** テキスト。
 		*/
-		private void Update()
+		public UnityEngine.UI.Text uitext_fixed;
+		public UnityEngine.UI.Text uitext_delta;
+
+		/** fixedcount
+		*/
+		public int fixedcount;
+
+		/** Awake
+		*/
+		private void Awake()
 		{
-			#if(MOUSE_UPDATE)
+			UnityEngine.Time.fixedDeltaTime = 1.0f / 60.0f;
+			UnityEngine.Application.targetFrameRate = 60;
+			UnityEngine.QualitySettings.vSyncCount = -1;
 
-			if(this.mouse_update.left.rapid == true){
-				this.value_update++;
-			}
+			//timescale
+			this.timescale = new BlueBack.TimeScale.TimeScale();
 
-			if(this.mouse_update.right.down == true){
-				this.value_update--;
-			}
+			//ui_text
+			this.uitext_fixed = UnityEngine.GameObject.Find("Fixed").GetComponent<UnityEngine.UI.Text>();
+			this.uitext_delta = UnityEngine.GameObject.Find("Delta").GetComponent<UnityEngine.UI.Text>();
 
-			if(this.mouse_update.center.up == true){
-				this.value_update = 0;
-			}
-
-			this.value_wheel_update += this.mouse_update.wheel.pos;
-
-			#endif
+			//fixedcount
+			this.fixedcount = 0;
 		}
 
 		/** FixedUpdate
 		*/
 		private void FixedUpdate()
 		{
-			#if(MOUSE_FIXEDUPDATE)
-
-			if(this.mouse_fixedupdate.left.rapid == true){
-				this.value_fixedupdate++;
-			}
-			if(this.mouse_fixedupdate.right.down == true){
-				this.value_fixedupdate--;
-			}
-			if(this.mouse_fixedupdate.center.up == true){
-				this.value_fixedupdate = 0;
-			}
-
-			this.value_wheel_fixedupdate += this.mouse_fixedupdate.wheel.pos;
-
-			#endif
+			this.fixedcount++;
+			this.uitext_fixed.text = this.fixedcount.ToString();
 		}
 
 		/** LateUpdate
 		*/
 		private void LateUpdate()
 		{
-			#if(MOUSE_MANUAL)
-
-			//マニュアル呼び出し。
-			this.mouse_manual.StatusUpdate();
-
-			if(this.mouse_manual.left.rapid == true){
-				this.value_manual++;
-			}
-			if(this.mouse_manual.right.down == true){
-				this.value_manual--;
-			}
-			if(this.mouse_manual.center.up == true){
-				this.value_manual = 0;
+			//ポーズ。
+			if(UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.Space) == true){
+				this.pause ^= true;
 			}
 
-			this.value_wheel_manual += this.mouse_manual.wheel.pos;
+			//ステップ。
+			if(UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.Return) == true){
+				this.stepplay_request = true;
+			}
 
-			#endif
+			//ポーズ設定。
+			this.timescale.SetPauseNextFrame(this.pause);
+			
+			//uitext_delta
+			if(this.pause == true){
+				if(UnityEngine.Time.deltaTime > 0.0f){
+					this.uitext_delta.text = UnityEngine.Time.deltaTime.ToString() + " : " + this.timescale.GetTimeScale().ToString();
+				}
+			}else{
+				this.uitext_delta.text = UnityEngine.Time.deltaTime.ToString();
+			}
 
-			#if(MOUSE_UPDATE)
-			this.text_update.text		= string.Format("Update      {0} {1} {2} {3:0.000} {4:0.000}",this.value_update,this.value_wheel_update.x,this.value_wheel_update.y,this.mouse_update.cursor.pos.x,this.mouse_update.cursor.pos.y);
-			#endif
-
-			#if(MOUSE_FIXEDUPDATE)
-			this.text_fixedupdate.text	= string.Format("FixedUpdate {0} {1} {2} {3:0.000} {4:0.000}",this.value_fixedupdate,this.value_wheel_fixedupdate.x,this.value_wheel_fixedupdate.y,this.mouse_fixedupdate.cursor.pos.x,this.mouse_fixedupdate.cursor.pos.y);
-			#endif
-
-			#if(MOUSE_MANUAL)
-			this.text_manual.text		= string.Format("Manual      {0} {1} {2} {3:0.000} {4:0.000}",this.value_manual,this.value_wheel_manual.x,this.value_wheel_manual.y,this.mouse_manual.cursor.pos.x,this.mouse_manual.cursor.pos.y);
-			#endif
+			//ポーズを１フレーム解除する。
+			if(this.stepplay_request == true){
+				this.stepplay_request = false;
+				this.timescale.StepPlay();
+			}
 		}
 
-		#endif
+		/** OnDestroy
+		*/
+		private void OnDestroy()
+		{
+			if(this.timescale != null){
+				this.timescale.Dispose();
+				this.timescale = null;
+			}
+		}
 	}
 }
 
