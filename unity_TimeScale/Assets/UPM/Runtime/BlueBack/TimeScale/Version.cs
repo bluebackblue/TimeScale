@@ -17,7 +17,7 @@ namespace BlueBack.TimeScale
 	{
 		/** version
 		*/
-		public const string packageversion = "0.0.4";
+		public const string packageversion = "0.0.5";
 
 		/** GetPackageVersion
 		*/
