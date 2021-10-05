@@ -1,1 +1,1 @@
-{"samples":[{"path":"Samples~/Exsample","displayName":"Exsample"}],"keyword":["time"],"author":{"url":"https://github.com/bluebackblue","name":"BlueBack"},"discription":"タイムスケール操作","unity":"2020.1","version":"0.0.5","displayName":"TimeScale","name":"blueback.timescale"}
+{"samples":[{"path":"Samples~/Exsample","displayName":"Exsample"}],"dependencies":{},"keyword":["time"],"author":{"url":"https://github.com/bluebackblue","name":"BlueBack"},"discription":"タイムスケール操作","unity":"2020.1","version":"0.0.6","displayName":"TimeScale","name":"blueback.timescale"}

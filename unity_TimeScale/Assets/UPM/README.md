@@ -14,7 +14,7 @@ Unity 2021.1.11f1
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/TimeScale.git?path=unity_TimeScale/Assets/UPM#0.0.5
+* https://github.com/bluebackblue/TimeScale.git?path=unity_TimeScale/Assets/UPM#0.0.6
 ### 開発
 * https://github.com/bluebackblue/TimeScale.git?path=unity_TimeScale/Assets/UPM
 
