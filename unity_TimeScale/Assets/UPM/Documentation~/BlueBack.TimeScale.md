@@ -8,13 +8,16 @@ MIT License
 
 ## 外部依存 / 使用ライセンス等
 * https://github.com/bluebackblue/UnityPlayerLoop
+* https://github.com/bluebackblue/TimeScale
+### サンプルのみ
+* https://github.com/bluebackblue/TimeScale
 
 ## 動作確認
 Unity 2021.1.11f1
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/TimeScale.git?path=unity_TimeScale/Assets/UPM#0.0.6
+* https://github.com/bluebackblue/TimeScale.git?path=unity_TimeScale/Assets/UPM#0.0.7
 ### 開発
 * https://github.com/bluebackblue/TimeScale.git?path=unity_TimeScale/Assets/UPM
 
