@@ -6,7 +6,7 @@
 MIT License
 * https://github.com/bluebackblue/TimeScale/blob/main/LICENSE
 
-## 外部依存 / 使用ライセンス等
+## 依存 / 使用ライセンス等
 ### ランタイム
 ### エディター
 * https://github.com/bluebackblue/TimeScale
@@ -18,7 +18,7 @@ Unity 2021.1.11f1
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/TimeScale.git?path=unity_TimeScale/Assets/UPM#0.0.7
+* https://github.com/bluebackblue/TimeScale.git?path=unity_TimeScale/Assets/UPM#0.0.8
 ### 開発
 * https://github.com/bluebackblue/TimeScale.git?path=unity_TimeScale/Assets/UPM
 
