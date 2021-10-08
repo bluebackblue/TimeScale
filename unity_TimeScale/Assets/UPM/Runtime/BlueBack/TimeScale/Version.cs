@@ -13,7 +13,7 @@ namespace BlueBack.TimeScale
 {
 	/** Version
 	*/
-	public class Version
+	public static class Version
 	{
 		/** packagename
 		*/
@@ -21,7 +21,7 @@ namespace BlueBack.TimeScale
 
 		/** packageversion
 		*/
-		public const string packageversion = "0.0.8";
+		public const string packageversion = "0.0.9";
 
 		/** GetPackageVersion
 		*/

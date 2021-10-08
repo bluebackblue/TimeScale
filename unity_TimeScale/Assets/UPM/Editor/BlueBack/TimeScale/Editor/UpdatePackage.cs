@@ -15,7 +15,7 @@ namespace BlueBack.TimeScale.Editor
 	/** UpdatePackage
 	*/
 	#if(!DEF_USER_BLUEBACK_TIMESCALE)
-	public class UpdatePackage
+	public static class UpdatePackage
 	{
 		/** MenuItem_BlueBack_TimeScale_UpdatePackage
 		*/

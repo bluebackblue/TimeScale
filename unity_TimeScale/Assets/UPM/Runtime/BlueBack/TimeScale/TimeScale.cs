@@ -13,7 +13,7 @@ namespace BlueBack.TimeScale
 {
 	/** TimeScale
 	*/
-	public class TimeScale : System.IDisposable
+	public sealed class TimeScale : System.IDisposable
 	{
 		/** 次のフレームはポーズする。
 		*/
@@ -40,6 +40,7 @@ namespace BlueBack.TimeScale
 			BlueBack.UnityPlayerLoop.Add.AddFromType(ref t_playerloopsystem,UnityPlayerLoop.Mode.AddFirst,typeof(UnityEngine.PlayerLoop.Initialization),typeof(PlayerLoopType.InitUpdate),this.InitUpdate);
 			BlueBack.UnityPlayerLoop.Add.AddFromType(ref t_playerloopsystem,UnityPlayerLoop.Mode.AddFirst,typeof(UnityEngine.PlayerLoop.PostLateUpdate),typeof(PlayerLoopType.ApplyUpdate),this.ApplyUpdate);
 			BlueBack.UnityPlayerLoop.UnityPlayerLoop.SetPlayerLoop(t_playerloopsystem);
+			BlueBack.UnityPlayerLoop.UnityPlayerLoop.SetDefaultPlayerLoopOnUnityDestroy();
 
 			//timescale
 			this.timescale = 1.0f;

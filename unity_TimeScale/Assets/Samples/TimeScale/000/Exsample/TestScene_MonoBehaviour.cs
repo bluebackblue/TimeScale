@@ -4,9 +4,9 @@
 */
 namespace Samples.TimeScale.Exsample
 {
-	/** Main_MonoBehaviour
+	/** TestScene_MonoBehaviour
 	*/
-	public class Main_MonoBehaviour : UnityEngine.MonoBehaviour
+	public sealed class TestScene_MonoBehaviour : UnityEngine.MonoBehaviour
 	{
 		/** timescale
 		*/

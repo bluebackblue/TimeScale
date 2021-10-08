@@ -17,15 +17,11 @@ namespace BlueBack.TimeScale
 	{
 		/** 更新。
 		*/
-		public struct InitUpdate
-		{
-		}
+		public struct InitUpdate{}
 
 		/** 更新。
 		*/
-		public struct ApplyUpdate
-		{
-		}
+		public struct ApplyUpdate{}
 	}
 }
 
