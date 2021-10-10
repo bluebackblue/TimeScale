@@ -28,9 +28,9 @@ namespace BlueBack.TimeScale.Editor
 				DebugTool.EditorLogError("GetLastReleaseNameFromGitHub : connect error");
 				#endif
 			}else if(t_version.Length <= 0){
-				UnityEditor.PackageManager.Client.Add("https://github.com/bluebackblue/TimeScale.git?path=unity_TimeScale/Assets/UPM");
+				UnityEditor.PackageManager.Client.Add("https://github.com/bluebackblue/TimeScale.git?path=BlueBackTimeScale/Assets/UPM");
 			}else{
-				UnityEditor.PackageManager.Client.Add("https://github.com/bluebackblue/TimeScale.git?path=unity_TimeScale/Assets/UPM#" + t_version);
+				UnityEditor.PackageManager.Client.Add("https://github.com/bluebackblue/TimeScale.git?path=BlueBackTimeScale/Assets/UPM#" + t_version);
 			}
 		}
 
