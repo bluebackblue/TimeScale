@@ -4,23 +4,23 @@
 
 ## ライセンス
 MIT License
-* https://github.com/bluebackblue/TimeScale/blob/main/LICENSE
+* https://github.com/bluebackblue/UpmTimeScale/blob/main/LICENSE
 
 ## 依存 / 使用ライセンス等
 ### ランタイム
 ### エディター
-* https://github.com/bluebackblue/TimeScale
+* https://github.com/bluebackblue/UpmTimeScale
 ### サンプル
-* https://github.com/bluebackblue/TimeScale
+* https://github.com/bluebackblue/UpmTimeScale
 
 ## 動作確認
 Unity 2021.1.11f1
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/TimeScale.git?path=unity_TimeScale/Assets/UPM#0.0.10
+* https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM#0.0.11
 ### 開発
-* https://github.com/bluebackblue/TimeScale.git?path=unity_TimeScale/Assets/UPM
+* https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM
 
 ## Unityへの追加方法
 * Unity起動
