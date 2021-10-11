@@ -34,7 +34,7 @@ Gitクライアントがインストールされている必要がある。
 * https://git-scm.com/
 
 ## 例
-```
+```cs
 /** ポーズ。ステップ再生。
 */
 public sealed class Exsample : UnityEngine.MonoBehaviour
