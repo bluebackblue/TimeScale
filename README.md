@@ -9,7 +9,7 @@ MIT License
 ## 依存 / 使用ライセンス等
 ### ランタイム
 ### エディター
-* https://github.com/bluebackblue/UpmTimeScale
+* https://github.com/bluebackblue/UpmVersionManager
 ### サンプル
 * https://github.com/bluebackblue/UpmTimeScale
 
@@ -18,7 +18,7 @@ Unity 2021.1.11f1
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM#0.0.11
+* https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM#0.0.12
 ### 開発
 * https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM
 
@@ -35,33 +35,33 @@ Gitクライアントがインストールされている必要がある。
 
 ## 例
 ```
-
-/** timescale
+/** ポーズ。ステップ再生。
 */
-private BlueBack.TimeScale.TimeScale timescale;
-
-/** Start
-*/
-private void Start()
+public sealed class Exsample : UnityEngine.MonoBehaviour
 {
-	//timescale
-	this.timescale = new BlueBack.TimeScale.TimeScale();
-}
-
-/** Update
-*/
-private void Update()
-{
-	//ポーズ。
-	if(UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.Space) == true){
-		this.timescale.SetPause(true);
+	/** timescale
+	*/
+	private BlueBack.TimeScale.TimeScale timescale;
+	/** Start
+	*/
+	private void Start()
+	{
+		//timescale
+		this.timescale = new BlueBack.TimeScale.TimeScale();
 	}
-
-	//ステップ再生。
-	if(UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.Return) == true){
-		this.timescale.StepPlay();
+	/** Update
+	*/
+	private void Update()
+	{
+		//ポーズ。
+		if(UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.Space) == true){
+			this.timescale.SetPause(true);
+		}
+		//ステップ再生。
+		if(UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.Return) == true){
+			this.timescale.StepPlay();
+		}
 	}
 }
-
 ```
 
