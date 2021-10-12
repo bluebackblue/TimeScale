@@ -18,7 +18,7 @@ Unity 2021.1.11f1
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM#0.0.12
+* https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM#0.0.13
 ### 開発
 * https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM
 
@@ -34,34 +34,4 @@ Gitクライアントがインストールされている必要がある。
 * https://git-scm.com/
 
 ## 例
-```
-/** ポーズ。ステップ再生。
-*/
-public sealed class Exsample : UnityEngine.MonoBehaviour
-{
-	/** timescale
-	*/
-	private BlueBack.TimeScale.TimeScale timescale;
-	/** Start
-	*/
-	private void Start()
-	{
-		//timescale
-		this.timescale = new BlueBack.TimeScale.TimeScale();
-	}
-	/** Update
-	*/
-	private void Update()
-	{
-		//ポーズ。
-		if(UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.Space) == true){
-			this.timescale.SetPause(true);
-		}
-		//ステップ再生。
-		if(UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.Return) == true){
-			this.timescale.StepPlay();
-		}
-	}
-}
-```
 

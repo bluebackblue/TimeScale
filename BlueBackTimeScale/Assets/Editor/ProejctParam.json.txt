@@ -7,10 +7,10 @@
     "discription_simple":"タイムスケール操作",
     "discription_detal":[
         "タイムスケール操作",
-        "* 停止、再開、ステップ再生",
+        "* 停止、再開、ステップ再生"
     ],
     "keyword":[
-        "time",
+        "time"
     ],
     "changelog":[
         "# Changelog",
@@ -18,7 +18,7 @@
         "## [0.0.0] - 2021-04-13",
         "### Changes",
         "- Init",
-        "",
+        ""
     ],
     "root_readmemd_path":"../../README.md",
     "need_unity_version":"2020.1",
@@ -29,7 +29,7 @@
             {
                 "use":"use",
                 "package_fullname":"BlueBack.UnityPlayerLoop",
-                "url":"https://github.com/bluebackblue/UpmUnityPlayerLoop",
+                "url":"https://github.com/bluebackblue/UpmUnityPlayerLoop"
             },
         ]
     },
@@ -40,8 +40,8 @@
             {
                 "use":"use",
                 "package_fullname":"BlueBack.TimeScale",
-                "url":"https://github.com/bluebackblue/UpmVersionManager",
-            },
+                "url":"https://github.com/bluebackblue/UpmVersionManager"
+            }
         ]
     },
     "asmdef_sample":{
@@ -51,8 +51,8 @@
             {
                 "use":"use",
                 "package_fullname":"BlueBack.TimeScale",
-                "url":"https://github.com/bluebackblue/UpmTimeScale",
-            },
+                "url":"https://github.com/bluebackblue/UpmTimeScale"
+            }
         ]
-    },
+    }
 }
