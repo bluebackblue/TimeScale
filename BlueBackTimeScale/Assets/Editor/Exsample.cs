@@ -6,7 +6,7 @@ namespace Editor
 {
 	//<<COMMENT>>## 例
 
-	//<<BLOACKSTART>>
+	//<<CS_BLOCK_START>>
 	/** ポーズ。ステップ再生。
 	*/
 	public sealed class Exsample : UnityEngine.MonoBehaviour
@@ -38,6 +38,6 @@ namespace Editor
 			}
 		}
 	}
-	//<<BLOACKEND>>
+	//<<CS_BLOCK_END>>
 }
 
