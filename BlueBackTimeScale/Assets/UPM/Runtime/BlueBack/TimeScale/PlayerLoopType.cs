@@ -15,13 +15,13 @@ namespace BlueBack.TimeScale
 	*/
 	public struct PlayerLoopType
 	{
-		/** 更新。
+		/** Init
 		*/
-		public struct InitUpdate{}
+		public struct Init{}
 
-		/** 更新。
+		/** Apply
 		*/
-		public struct ApplyUpdate{}
+		public struct Apply{}
 	}
 }
 
