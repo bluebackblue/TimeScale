@@ -1,8 +1,8 @@
 
 
-/** Samples.TimeScale.Exsample
+/** Samples.TimeScale.StepPlay
 */
-namespace Samples.TimeScale.Exsample
+namespace Samples.TimeScale.StepPlay
 {
 	/** TestScene_MonoBehaviour
 	*/
