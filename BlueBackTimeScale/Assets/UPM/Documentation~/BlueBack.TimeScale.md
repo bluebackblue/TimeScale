@@ -15,11 +15,11 @@ MIT License
 * https://github.com/bluebackblue/UpmTimeScale
 
 ## 動作確認
-Unity 2022.1.0b2
+Unity 2022.1.0b8
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM#0.0.14
+* https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM#0.0.15
 ### 開発
 * https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM
 

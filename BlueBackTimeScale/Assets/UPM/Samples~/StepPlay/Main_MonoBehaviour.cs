@@ -1,12 +1,12 @@
 
 
-/** Samples.TimeScale.StepPlay
+/** BlueBack.TimeScale.Samples.StepPlay
 */
-namespace Samples.TimeScale.StepPlay
+namespace BlueBack.TimeScale.Samples.StepPlay
 {
-	/** TestScene_MonoBehaviour
+	/** Main_MonoBehaviour
 	*/
-	public sealed class TestScene_MonoBehaviour : UnityEngine.MonoBehaviour
+	public sealed class Main_MonoBehaviour : UnityEngine.MonoBehaviour
 	{
 		/** timescale
 		*/
