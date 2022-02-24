@@ -19,7 +19,7 @@ Unity 2022.1.0b8
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM#0.0.15
+* https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM#0.0.16
 ### 開発
 * https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM
 
