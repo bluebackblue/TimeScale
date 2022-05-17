@@ -7,6 +7,13 @@
 */
 
 
+/** define
+*/
+#if((ASMDEF_BLUEBACK_UNITYPLAYERLOOP)||(USERDEF_BLUEBACK_UNITYPLAYERLOOP))
+#define ASMDEF_TRUE
+#endif
+
+
 /** BlueBack.TimeScale
 */
 namespace BlueBack.TimeScale
@@ -34,6 +41,7 @@ namespace BlueBack.TimeScale
 		/** constructor
 		*/
 		public TimeScale()
+		#if(ASMDEF_TRUE)
 		{
 			//PlayerLoopSystem
 			UnityEngine.LowLevel.PlayerLoopSystem t_playerloopsystem = BlueBack.UnityPlayerLoop.UnityPlayerLoop.GetCurrentPlayerLoop();
@@ -54,6 +62,28 @@ namespace BlueBack.TimeScale
 			//stepplay_request
 			this.stepplay_request = false;
 		}
+		#else
+		{
+			#warning "ASMDEF_TRUE"
+		}
+		#endif
+
+		/** [IDisposable]Dispose。
+		*/
+		public void Dispose()
+		#if(ASMDEF_TRUE)
+		{
+			//PlayerLoopSystem
+			UnityEngine.LowLevel.PlayerLoopSystem t_playerloopsystem = BlueBack.UnityPlayerLoop.UnityPlayerLoop.GetCurrentPlayerLoop();
+			BlueBack.UnityPlayerLoop.Remove.RemoveFromType(ref t_playerloopsystem,typeof(PlayerLoopType.Init));
+			BlueBack.UnityPlayerLoop.Remove.RemoveFromType(ref t_playerloopsystem,typeof(PlayerLoopType.Apply));
+			BlueBack.UnityPlayerLoop.UnityPlayerLoop.SetPlayerLoop(t_playerloopsystem);
+		}
+		#else
+		{
+			#warning "ASMDEF_TRUE"
+		}
+		#endif
 
 		/** 次のフレームのタイムスケール。設定。
 		*/
@@ -115,17 +145,6 @@ namespace BlueBack.TimeScale
 			}
 
 			this.stepplay_request = false;
-		}
-
-		/** [IDisposable]Dispose。
-		*/
-		public void Dispose()
-		{
-			//PlayerLoopSystem
-			UnityEngine.LowLevel.PlayerLoopSystem t_playerloopsystem = BlueBack.UnityPlayerLoop.UnityPlayerLoop.GetCurrentPlayerLoop();
-			BlueBack.UnityPlayerLoop.Remove.RemoveFromType(ref t_playerloopsystem,typeof(PlayerLoopType.Init));
-			BlueBack.UnityPlayerLoop.Remove.RemoveFromType(ref t_playerloopsystem,typeof(PlayerLoopType.Apply));
-			BlueBack.UnityPlayerLoop.UnityPlayerLoop.SetPlayerLoop(t_playerloopsystem);
 		}
 	}
 }
