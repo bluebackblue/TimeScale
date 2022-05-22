@@ -15,7 +15,7 @@ namespace BlueBack.TimeScale.Samples.StepPlay
 		/** ポーズ。
 		*/
 		public bool pause;
-		
+
 		/** ポーズを１フレーム解除する。
 		*/
 		public bool stepplay_request;
@@ -72,7 +72,7 @@ namespace BlueBack.TimeScale.Samples.StepPlay
 
 			//ポーズ設定。
 			this.timescale.SetPause(this.pause);
-			
+
 			//uitext_delta
 			if(this.pause == true){
 				if(UnityEngine.Time.deltaTime > 0.0f){
