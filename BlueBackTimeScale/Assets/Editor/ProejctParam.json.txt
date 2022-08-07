@@ -31,7 +31,7 @@
 				"package_fullname":"BlueBack.UnityPlayerLoop",
 				"url":"https://github.com/bluebackblue/UpmUnityPlayerLoop",
 				"define_package_pathname":"blueback.unityplayerloop"
-			},
+			}
 		]
 	},
 	"asmdef_editor":{
