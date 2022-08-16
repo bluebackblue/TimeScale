@@ -9,6 +9,7 @@ MIT License
 ## 依存 / 使用ライセンス等
 ### ランタイム
 * https://github.com/bluebackblue/UpmUnityPlayerLoop
+* https://github.com/bluebackblue/UpmDebug
 ### エディター
 * https://github.com/bluebackblue/UpmVersionManager
 ### サンプル
@@ -19,7 +20,7 @@ Unity 2022.1.0b16
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM#0.0.18
+* https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM#0.0.19
 ### 開発
 * https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM
 
