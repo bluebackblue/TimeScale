@@ -11,7 +11,7 @@ MIT License
 * https://github.com/bluebackblue/UpmUnityPlayerLoop
 * https://github.com/bluebackblue/UpmDebug
 ### エディター
-* https://github.com/bluebackblue/UpmVersionManager
+* https://github.com/bluebackblue/UpmTimeScale
 ### サンプル
 * https://github.com/bluebackblue/UpmTimeScale
 
