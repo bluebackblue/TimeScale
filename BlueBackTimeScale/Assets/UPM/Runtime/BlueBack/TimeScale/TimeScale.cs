@@ -66,7 +66,6 @@ namespace BlueBack.TimeScale
 		}
 		#else
 		{
-			#warning "ASMDEF_TRUE"
 		}
 		#endif
 
@@ -83,7 +82,6 @@ namespace BlueBack.TimeScale
 		}
 		#else
 		{
-			#warning "ASMDEF_TRUE"
 		}
 		#endif
 
